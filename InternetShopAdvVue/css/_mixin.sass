@@ -1,0 +1,97 @@
+= textBoldBlack($font-size, $line-height)
+    font-family: Lato
+    font-style: normal
+    font-weight: bold
+    font-size: $font-size
+    line-height: $line-height
+    color: #222222
+
+= textBoldWhite($font-size, $line-height)
+    font-family: Lato
+    font-style: normal
+    font-weight: bold
+    font-size: $font-size
+    line-height: $line-height
+    color: #ffffff
+
+= textNormalBlack($font-size, $line-height)
+    font-family: Lato
+    font-style: normal
+    font-weight: normal
+    font-size: $font-size
+    line-height: $line-height
+    color: #222222
+
+= textNormalWhite($font-size, $line-height)
+    font-family: Lato
+    font-style: normal
+    font-weight: normal
+    font-size: $font-size
+    line-height: $line-height
+    color: #ffffff
+
+= textParam( $font-weight, $font-size, $line-height, $font-color)
+    font-family: Lato
+    font-style: normal
+    font-weight: $font-weight
+    font-size: $font-size
+    line-height: $line-height
+    color: $font-color
+
+= flexSB ()
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+= flexColumnSB ()
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+
+= flexColumnCenter ()
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+= flexCenter ()
+    display: flex
+    align-items: center
+    justify-content: center
+
+= media ($widhtSite)
+    $padCentre: calc(50% - #{$widhtSite / 2})
+    .center
+        padding-left: $padCentre
+        padding-right: $padCentre
+    .assistant
+        margin-right: calc(50% - #{$widhtSite / 2})
+    .detail 
+        margin-left: calc(50% -  #{$widhtSite / 2})
+        margin-right: calc(50% -  #{$widhtSite / 2})
+        &__content
+            //padding-left: calc(50% -  #{$widhtSite / 2})
+            //padding-right: calc(50% -  #{$widhtSite / 2})
+    
+= ticker ($widhtSite)
+    @if $widhtSite>400px
+        @keyframes ticker
+            from 
+                margin-left: 1px
+            50% 
+                margin-left: $widhtSite - 350px
+            100% 
+                margin-left: 1px
+    @else
+        @keyframes ticker
+            from 
+                color: $colorSelect
+            25% 
+                color: #0890ff
+            50% 
+                color: #26fc0a
+            75% 
+                color: #f5de0c
+            100% 
+                color: $colorSelect

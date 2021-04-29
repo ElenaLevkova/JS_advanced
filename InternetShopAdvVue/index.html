@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+    <div id="app">
+        <top-header :afilterfield="filterField" :visibility-cart="showCart" 
+            :visibility-filter="showFilter" @filter="filter"></top-header> 
+        <modal-assistant></modal-assistant>
+        <promo-sale :visibility="showPromo"></promo-sale>
+        <products :products="filteredProducts" :visibility="showProduct" @add-product="addProduct" @get-show="getShowCartProduct"></products>
+        <cart :acartitems="cart" :visibility="showCart"></cart>
+        <info :visibility="showInfo"></info>
+        <subscribe :visibility="showSubscribe"></subscribe>
+        <footer-component :visibility="showFooter"></footer-component>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/topComponent.js"></script>
+    <script src="js/filterComponent.js"></script>
+    <script src="js/PromoComponent.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/ModalAssistantComponent.js"></script>
+    <script src="js/InfoComponent.js"></script>
+    <script src="js/SubscribeComponent.js"></script>
+    <script src="js/FooterComponent.js"></script>
+    <script  src="js/script.js"></script>
+    <!-- <script  src="js/main.js"></script> -->
+
+</body>
+
+</html>
+
+
